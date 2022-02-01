@@ -1,0 +1,32 @@
+<nav class="navbar">
+  <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png" width="500" height="100"/> -->
+  <div class="search">
+    <input type="search" id="search" placeholder="search marvel stories" [(ngModel)]="search" (change)="searchbyname()">
+    <button (click)="searchbyname()">Submit</button>
+  </div>
+    
+   
+</nav>
+<br/>
+<br/>
+<br/>
+<div class="table">
+ <table border="1" >
+   <tr>
+     <th>ID</th>
+     <th>NAME</th>
+     <th>DESCRIPTION</th>
+   </tr>
+   <tbody>
+    <tr *ngFor="let items of data">
+        <td>{{items.id}}</td>
+        <td>{{items.name}}</td>
+        <td>{{items.description}}</td>
+    </tr>
+</tbody>
+ </table>
+</div>
+
+
+
+  <router-outlet></router-outlet>
